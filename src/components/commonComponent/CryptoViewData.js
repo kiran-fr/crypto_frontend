@@ -14,7 +14,7 @@ export const CryptoViewData = () => {
 
         try {
             console.log("This is id", id)
-            const data = await axios.delete(`${url}/delete/${id}`)
+            const data = await axios.delete(`https://crypto-web-apps.herokuapp.com/delete/${id}`)
             window.location.reload()
         } catch (error) {
             console.log(error)
@@ -25,7 +25,7 @@ export const CryptoViewData = () => {
 
     const getCryptoData = async () => {
         try {
-            const { data } = await axios.get(`${url}/view`)
+            const { data } = await axios.get(`https://crypto-web-apps.herokuapp.com/view`)
             setViewData(data)
             console.log(viewData)
         } catch (error) {

@@ -54,7 +54,7 @@ export const CryptoDetails = () => {
                 crypto_symbol: saveData.symbol,
                 current_price: Math.round(saveData.quote.USD.price)
             }
-            await axios.post(`${url}/home`, postData)
+            await axios.post(`https://crypto-web-apps.herokuapp.com/home`, postData)
             window.location.reload()
         } catch (error) {
             toast.error(error)
@@ -65,7 +65,7 @@ export const CryptoDetails = () => {
     // get data from data base
     useEffect(() => {
         const fun = async () => {
-            const { data } = await axios.get(`${url}/view`)
+            const { data } = await axios.get(`https://crypto-web-apps.herokuapp.com/view`)
             setCryptoDb(data)
         }
         fun()
