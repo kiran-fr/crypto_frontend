@@ -1,0 +1,27 @@
+.draggble_card_content {
+    border: 0px solid #808080;
+    border-radius: 15px;
+    height: 200px;
+    min-width: 200px;
+    /* padding: 20px 20px; */
+    margin: 5px 10px;
+    box-shadow: 1px 2px 3px 2px #ccc;
+    background-color: #fff;
+}
+.google_img {
+    background-image: url("../images/google.jpg");
+    background-size: cover;
+}
+.fb_img {
+    background-image: url("../images/fb.png");
+    background-size: cover;
+}
+.amazon_img {
+    background-image: url("../images/amazon.jpg");
+    background-size: cover;
+}
+
+.draggable_content {
+    display: flex;
+    justify-content: space-around;
+}

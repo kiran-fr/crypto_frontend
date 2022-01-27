@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './assets/css//HeroCard.css'
+import { CryptoDetails } from './components/commonComponent/CryptoDetails';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { CryptoViewData } from './components/commonComponent/CryptoViewData';
+import { MainPage } from './components/commonComponent/MainPage';
 
-function App() {
+export const App = () => {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <div style={{ margin: 20 }}>
+        <Router>
+          <Routes>
+            <Route exact path='/' element={<MainPage />} />
+            <Route exact path='home' element={<CryptoDetails />} />
+            <Route exact path='view' element={<CryptoViewData />} />
+          </Routes>
+        </Router>
+      </div>
 
-export default App;
+
+    </>
+  )
+} 
