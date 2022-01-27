@@ -75,7 +75,7 @@ export const CryptoDetails = () => {
     // api data maping function
     const cryptoTableData = (viewData) => {
         if (viewData.length === 0) {
-            return <tr style={{textAlign:'center'}}><td colSpan={5} >No Data Found</td></tr>
+            return <tr style={{ textAlign: 'center' }}><td colSpan={5} >No Data Found</td></tr>
         } else {
             return viewData.filter(post => {
                 if (text === '') {
@@ -110,7 +110,7 @@ export const CryptoDetails = () => {
 
     return (
         <>
-             <HeroCard />
+            <HeroCard />
 
             <ToastContainer />
 

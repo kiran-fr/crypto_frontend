@@ -4,6 +4,7 @@ import { CryptoDetails } from './components/commonComponent/CryptoDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CryptoViewData } from './components/commonComponent/CryptoViewData';
 import { MainPage } from './components/commonComponent/MainPage';
+import DemoTableData from "./components/commonComponent/DemoTableData"
 
 export const App = () => {
 
@@ -15,13 +16,11 @@ export const App = () => {
         <Router>
           <Routes>
             <Route exact path='/' element={<MainPage />} />
-            <Route exact path='home' element={<CryptoDetails />} />
+            <Route exact path='home' element={<DemoTableData />} />
             <Route exact path='view' element={<CryptoViewData />} />
           </Routes>
         </Router>
       </div>
-
-
     </>
   )
 } 
