@@ -1,5 +1,5 @@
 import Draggable from "react-draggable"
-import google from "../../assets/images/google.jpg"
+import google from "../assets/images/google.jpg"
 
 export const HeroCard = () => {
     return (

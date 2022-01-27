@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { Button, Table } from "react-bootstrap"
 import axios from 'axios'
-import "../../assets/css/cryptoDetails.css"
+import "../assets/css/cryptoDetails.css"
 import { toast, ToastContainer } from "react-toastify"
 import _ from "lodash";
-import { cryptUrl, url } from "../../constants/urlConst"
+import { cryptUrl, url } from "../constants/urlConst"
 import { Link } from "react-router-dom"
 import { HeroCard } from "./HeroCard"
 

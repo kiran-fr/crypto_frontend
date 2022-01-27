@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './assets/css//HeroCard.css'
-import { CryptoDetails } from './components/commonComponent/CryptoDetails';
+import { CryptoDetails } from './commonComponent/CryptoDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { CryptoViewData } from './components/commonComponent/CryptoViewData';
-import { MainPage } from './components/commonComponent/MainPage';
-import DemoTableData from "./components/commonComponent/DemoTableData"
+import { CryptoViewData } from './commonComponent/CryptoViewData';
+import { MainPage } from './commonComponent/MainPage';
+import DemoTableData from "./commonComponent/DemoTableData"
 
 export const App = () => {
 

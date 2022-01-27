@@ -4,8 +4,8 @@ import throttle from "lodash/throttle";
 import Pagination from "rc-pagination";
 import "rc-pagination/assets/index.css";
 import axios from "axios";
-import { cryptUrl } from "../../constants/urlConst";
-import '../../assets/css/DemoTable.css'
+import { cryptUrl } from "../constants/urlConst";
+import '../assets/css/DemoTable.css'
 import { Button, ToastContainer } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -94,19 +94,27 @@ const DemoTableData = () => {
 
     const { key, index } = rowData;
 
-    return <tr key={index}>
-      <td>{key.cmc_rank}</td>
-      <td>{key.name}</td>
-      <td>{key.symbol}</td>
-      <td>{key.quote.USD.price}</td>
-      <td className="data_action">
-        {savedData ?
-          <Button size="sm"  >
-            <Link to={{ pathname: '/view' }} style={{ color: '#fff', textDecoration: 'none' }} >view</Link>
-          </Button> :
-          <Button variant="success" onClick={() => saveData(key)} size="sm">Save</Button>}
-      </td>
-    </tr>;
+    if (collection.length === 0) {
+      return <tr>
+        <td colSpan={5}>No Data found</td>
+      </tr>
+    } else {
+      return <tr key={index}>
+        <td>{key.cmc_rank}</td>
+        <td>{key.name}</td>
+        <td>{key.symbol}</td>
+        <td>{Math.round(key.quote.USD.price)} $</td>
+        <td className="data_action">
+          {savedData ?
+            <Button size="sm"  >
+              <Link to={{ pathname: '/view' }} className="view_link" >view</Link>
+            </Button> :
+            <Button variant="success" onClick={() => saveData(key)} size="sm">Save</Button>}
+        </td>
+      </tr>
+    }
+
+
   };
 
   const tableData = () => {
@@ -121,9 +129,9 @@ const DemoTableData = () => {
 
   return (
     <>
-    <HeroCard/>
-    <ToastContainer/>
-      <div style={{ border: '2px solid #ccc', borderRadius: 7, padding: "15px 15px 15px 15px", margin: '20px 20px' }}>
+      <HeroCard />
+      <ToastContainer />
+      <div className="table_bordered">
         <div className="search">
           <input
             placeholder="Search Campaign"

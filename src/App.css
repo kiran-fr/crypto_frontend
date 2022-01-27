@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.dashboard_stl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.view_link {
+  color: #fff;
+  text-decoration: none;
+}
+.table_bordered{
+  border: 2px solid #ccc;
+  border-radius: 7px;
+  padding: 15px 15px 15px 15px;
+  margin: 20px 20px;
+
+}

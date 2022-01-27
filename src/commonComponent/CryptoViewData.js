@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { url } from '../../constants/urlConst';
+import { url } from '../constants/urlConst';
 import { HeroCard } from './HeroCard';
 
 export const CryptoViewData = () => {
@@ -42,9 +42,9 @@ export const CryptoViewData = () => {
     return <div>
          <HeroCard />
 
-        <div style={{ border: '2px solid #ccc', borderRadius: 7, padding: "15px 15px 0px 15px", margin: '20px 20px' }} >
+        <div className="table_bordered"  >
             <Link style={{ marginTop: 20, paddingBottom: 40 }} to='/home'>Go to home page</Link>
-            <Table striped bordered hover style={{ boxShadow: '1px 2px 2px #ccc' }}>
+            <Table striped bordered hover>
                 <thead>
                     <tr style={{ textAlign: 'center' }}>
                         <th>ID</th>
